@@ -1,8 +1,11 @@
 module neck () {
     difference () {
-        scale([1, neckD/neckW1*2]) cylinder(neckL, neckW2/2, neckW1/2);
-        translate([-neckW2/2, 0, -1]) cube([neckW2, neckW2, neckL+2]);
-        translate([0,0, neckL-socketDistance-socketL/2]) cube ([neckW2, neckW2, socketL], true);
+        scale([1, neckD/neckW1*2]) 
+            cylinder(neckL, neckW2/2, neckW1/2);
+        translate([-neckW2/2, 0, -1]) 
+            cube([neckW2, neckW2, neckL+2]);
+        translate([0,0, neckL-socketDistance-socketL/2]) 
+            cube ([neckW2, neckW2, socketL], true);
     }
 }
 

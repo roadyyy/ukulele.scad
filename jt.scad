@@ -24,13 +24,20 @@ socketW =  neckW1 + (neckW2 - neckW1)/ neckL * socketDistance;
 socketD = bodyTh - wall;
 socketCylinder = 15/2;
 socketCylinderOffset = -10;
+//headstock
 
+headstockD = 10;
+headstockAngle = 13;
+headstockResizeL = 90;
+headstockResizeW = 60;
 // colors (view only)
 bodyC = "white";
 neckC = "#333333";
+headstockC = "white";
 
 include <./body.scad>;
 include <./neck.scad>;
+include <./headstock.scad>;
 
 color(bodyC) body();
 
@@ -39,3 +46,5 @@ color(neckC) translate([0,0.01,0]) union () {
     translate([0,0,neckL-socketDistance]) 
         socket();
 }
+
+color(headstockC) headstock();
