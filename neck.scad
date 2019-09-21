@@ -1,11 +1,15 @@
 module neck () {
     difference () {
         scale([1, neckD/neckW1*2]) 
-            cylinder(neckL, neckW2/2, neckW1/2);
+            cylinder(neckL+nutL, neckW2/2, neckW1/2);
         translate([-neckW2/2, 0, -1]) 
-            cube([neckW2, neckW2, neckL+2]);
+            cube([neckW2, neckW2, neckL+nutL+2]);
         translate([0,0, neckL-socketDistance-socketL/2]) 
             cube ([neckW2, neckW2, socketL], true);
+        headstockSocket(clearance);
+        // end of socket cut. fretboard will be extended to full length
+        translate([-neckW2/2,-socketD, neckEnd]) cube ([neckW2, socketD, socketL]);
+
     }
 }
 
@@ -26,7 +30,7 @@ module socket () {
                         rotate([0,90,0])
                             cube ([socketW, socketD, socketL+socketD]);
                 }
-
+        // cutouts
         translate([0,-socketD/2, socketCylinder*1.5])
             translate([-socketW/2, socketD/2, -socketL]) 
                 rotate([90, 0, 0]) 
@@ -35,6 +39,6 @@ module socket () {
             translate([socketW/2, socketD/2, -socketL]) 
                 rotate([90, 0, 0]) 
                     cylinder (socketD+2, socketCylinder, socketCylinder-clearance);
-
-        }
+    }
+    
 }
