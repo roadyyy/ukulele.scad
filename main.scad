@@ -40,16 +40,17 @@ neckC = "#333333"; //neck color
 headstockC = "white"; // headstock color
 fretboardC = "#333333"; // fretboard color
 
+// computed
+socketDistance = scaleLength/2+10;
+neckEnd = neckL-socketDistance-socketL*2;
+socketW =  neckW1 + (neckW2 - neckW1)/ neckL * socketDistance;
+socketD = bodyTh - wall - clearance;
+
 include <./body.scad>;
 include <./neck.scad>;
 include <./headstock.scad>;
 include <./fretboard.scad>;
 
-// computed
-neckEnd = neckL-socketDistance-socketL*2;
-socketW =  neckW1 + (neckW2 - neckW1)/ neckL * socketDistance;
-socketD = bodyTh - wall - clearance;
-socketDistance = scaleLength/2+10;
 
 // build
 color(bodyC) body();
