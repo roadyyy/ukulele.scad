@@ -24,8 +24,13 @@ socketCylinderOffset = -10; // socket cylinder cutout position
 
 headstockD = 10; // headstock depth
 headstockAngle = 13; // headstock angle
-headstockResizeL = 90; // headstock resize to length
+headstockResizeL = 100; // headstock resize to length
 headstockResizeW = 60; // headstock resize to width
+tunerHole = 5; // tuner hole raduis (usually 5mm)
+tunerScrew = 0.5; // tuner screw raduis
+tunerScrewL = 8; // tuner screw length
+tunerScrewDistance = 10.35; // tuner screw hole distance from tuner axis
+tunerScrewAngle = 45; // tuner screw hole angle
 
 //fretboard
 fretBoardD= 3; // fretboard depth (height above body)
