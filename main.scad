@@ -3,8 +3,8 @@ clearance= 0.2;
 // neck
 scaleLength = 350;
 neckL = 230; // neck length
-neckW1 = 35; // neck with at the nut
-neckW2 = 45; // neck with at the body
+neckW1 = 34; // neck with at the nut
+neckW2 = 44; // neck with at the body
 neckD = 15; // neck depth
 
 // body
@@ -34,10 +34,21 @@ tunerScrewAngle = 45; // tuner screw hole angle
 
 //fretboard
 fretBoardD= 3; // fretboard depth (height above body)
-nutH = 3; // nut height
+nutH = 2.1; // nut height
 nutL = 3; // nut length (along neck)
-fretH = 2; // fret height above neck (radius)
+fretH = 1; // fret height above neck (radius)
 numFrets = 18; // number of frets
+
+// strings
+stringsWidthNut = 26.8; // 1st to 4th string center distance at nut
+stringsWidthBridge = 40.2; // 1st to 4th string center distance at bridge
+stringHeight = 1.7; // height of strings above fretboard
+
+// gauges
+s1g = .5; // 1st A
+s2g = .7; // 2nd E
+s3g = .9; // 3rd C
+s4g = .5; // 4th G
 
 // colors (view only)
 bodyC = "white"; // body color
