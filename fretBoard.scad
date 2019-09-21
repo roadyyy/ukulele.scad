@@ -25,7 +25,11 @@ module fretboard () {
             rotate ([-90,0,90]) {
                 for (n = [1:1:numFrets]) {
                     translate([0, s-(s/(pow(2,(n/12)))), 0])
-                        cylinder (neckW1 + (neckW2-neckW1)/neckL*(s-(s/(pow(2,(n/12)))))-0.05, fretH/2, fretH/2, true);
+                        union () {
+                            translate([0, 0, ( neckW1-fretH + (neckW2-neckW1)/neckL*(s-(s/(pow(2,(n/12))))) )/2]) sphere (fretH/2);
+                            translate([0, 0, -( neckW1-fretH + (neckW2-neckW1)/neckL*(s-(s/(pow(2,(n/12))))) )/2]) sphere (fretH/2);
+                            cylinder (neckW1-fretH + (neckW2-neckW1)/neckL*(s-(s/(pow(2,(n/12)))))-0.05, fretH/2, fretH/2, true);
+                        }
                 }
             }
         }
