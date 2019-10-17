@@ -36,19 +36,31 @@ tunerScrewAngle = 45; // tuner screw hole angle
 fretBoardD= 3; // fretboard depth (height above body)
 nutH = 2.1; // nut height
 nutL = 3; // nut length (along neck)
-fretH = 1; // fret height above neck (radius)
+fretH = 1.1; // fret height above neck (radius)
 numFrets = 18; // number of frets
+
+fm = [5,7,10,15]; // fretmarks on frets #
+fm2 = [12]; // double fretmarks on frets #
+fretMark = 3; // fretmark radius
 
 // strings
 stringsWidthNut = 26.8; // 1st to 4th string center distance at nut
 stringsWidthBridge = 40.2; // 1st to 4th string center distance at bridge
-stringHeight = 1.7; // height of strings above fretboard
+stringHeight = 1.7; // height of strings above fretboard at nut
+stringHeightBridge = 12; // height of strings above fretboard at bridge
 
 // gauges
 s1g = .5; // 1st A
 s2g = .7; // 2nd E
 s3g = .9; // 3rd C
 s4g = .5; // 4th G
+
+// bridge
+bridgeNutW = stringsWidthBridge + 10;
+bridgeNutH = stringHeightBridge;
+bridgeNutTh = 3;
+bridgeBaseHeight = 3;
+bridgeL = 25;
 
 // colors (view only)
 bodyC = "white"; // body color
@@ -66,10 +78,17 @@ include <./body.scad>;
 include <./neck.scad>;
 include <./headstock.scad>;
 include <./fretboard.scad>;
+include <./bridge.scad>;
 
 
-// build
+
+// assembly
 color(bodyC) body();
+union () {
+    color(bodyC) deck();
+    color(neckC) bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
+}
+color(bodyC) bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh, bridgeBaseHeight);
 
 color(neckC) translate([0,0.01,0]) union () {
     neck();
@@ -79,4 +98,5 @@ color(neckC) translate([0,0.01,0]) union () {
 
 color(headstockC) headstock();
 color(fretboardC) fretboard();
+color(bodyC) fretmarks(0, clearance);
 

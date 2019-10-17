@@ -23,7 +23,7 @@ module headstock () {
                     rotate([90-headstockAngle, 0,180]) {
                         translate([15,30, -headstockD])
                             tuner("R");
-                        translate([-20,0,0]) rotate ([0,0, -20]) {
+                        translate([-21,5,0]) rotate ([0,0, -20]) {
                             translate([0,30, -headstockD])
                                 tuner("L");
                             translate([0,55, -headstockD])
