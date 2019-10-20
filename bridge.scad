@@ -20,7 +20,7 @@ module bridge (l, h, nW, thick, stringsWidth, gauge) {
                 }
             }
         
-            bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh, bridgeBaseHeight);
+            bridgeNut(bridgeNutH, bridgeNutW+2, bridgeNutTh, bridgeBaseHeight);
         }
 
     translate([(-nW) / 2, 10, neckL - scaleLength-l+10])
