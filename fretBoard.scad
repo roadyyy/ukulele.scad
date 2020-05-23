@@ -84,9 +84,9 @@ module fretmarks (margin, clr) {
     }
     // double mark
     for (n = fm2) {
-        translate([neckW2/2-10,0, neckL - (s-(s/(pow(2,(n/12))))) - (((s-(s/(pow(2,((n+1)/12))))) - (s-(s/(pow(2,(n/12)))))) / 2)])
+        translate([neckW2/2-10,0, neckL - (s-(s/(pow(2,((n-1)/12))))) - (((s-(s/(pow(2,(n/12))))) - (s-(s/(pow(2,((n-1)/12)))))) / 2)])
             rotate([-90,0,0]) cylinder (fretBoardD+margin, fretMark-clr, fretMark-clr);
-        translate([-neckW2/2+10,0, neckL - (s-(s/(pow(2,(n/12))))) - (((s-(s/(pow(2,((n+1)/12))))) - (s-(s/(pow(2,(n/12)))))) / 2)])
+        translate([-neckW2/2+10,0, neckL - (s-(s/(pow(2,((n-1)/12))))) - (((s-(s/(pow(2,(n/12))))) - (s-(s/(pow(2,((n-1)/12)))))) / 2)])
             rotate([-90,0,0]) cylinder (fretBoardD+margin, fretMark-clr, fretMark-clr);
     }
 }

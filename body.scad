@@ -7,18 +7,26 @@ module body () {
             difference () {
                 translate([0, -bodyTh, bodyPos]) 
                     rotate([0, -90,-90]) 
-                        linear_extrude(bodyTh-wall, convexity=10) 
+                        linear_extrude(bodyTh, convexity=10) 
                             resize([bodyResize, 0, 0]) 
                                 import (file = bodyShape, convexity= 4);
                 // inner
-                translate([0, -bodyTh+wall, bodyPos]) 
+                translate([0, -bodyTh-.1, bodyPos]) 
                     rotate([0, -90,-90]) 
-                        linear_extrude(bodyTh-2*wall+1, convexity=10)
+                        linear_extrude(bodyTh-wall+.1, convexity=10)
                             offset (-wall)
                                 resize([bodyResize, 0, 0])
                                     import (file = bodyShape, convexity= 4);
                 
                 translate([0,1,-holePos]) rotate([90,0,0]) cylinder(wall+2, hole, hole);
+                
+                //bridge positioning sockets
+                translate([15,-wall/2, neckL - scaleLength])
+                    rotate([90,0,0])
+                        cylinder (wall, 2.5+clearance/2, 2.5+clearance/2);
+                translate([-15,-wall/2, neckL - scaleLength])
+                    rotate([90,0,0])
+                        cylinder (wall, 2.5+clearance/2, 2.5+clearance/2);
             }
             // socket insert
             intersection () {
@@ -76,26 +84,12 @@ module body () {
 
 module deck() {
     // deck front
+    translate([0, -bodyTh-wall-clearance]) mirror ([0, 1, 0])
     union () {
         difference () {
-            translate([0, -wall-1, bodyPos])
-                rotate([0, -90,-90]) 
-                    linear_extrude(1, convexity=10)
-                        offset (-wall-clearance)
-                            resize([bodyResize, 0, 0])
-                                import (file = bodyShape, convexity= 4);
-            
-            translate([0,1,-holePos])
-                rotate([90,0,0])
-                    cylinder(wall+2, hole, hole);
-            
-            translate([-socketW/2,0, neckEnd + (socketL + socketD)/2 - bodyPos]) 
-                rotate([90,0,0]) 
-                    linear_extrude(bodyTh, convexity=10) 
-                        offset(clearance*2+wall) 
-                            square ([socketW, socketL+socketD]);
+            innerDeck(0);
+            innerDeck(-3);
         }
-        
         difference () {
             translate([0, -wall, bodyPos])
                 rotate([0, -90,-90]) 
@@ -103,15 +97,24 @@ module deck() {
                         resize([bodyResize, 0, 0])
                             import (file = bodyShape, convexity= 4);
             
-            translate([0,1,-holePos])
-                rotate([90,0,0])
-                    cylinder(wall+2, hole, hole);
+           
+        }
+    }
+}
+
+module innerDeck (offset) {
+    difference () {
+            translate([0, -wall-2, bodyPos])
+                rotate([0, -90,-90]) 
+                    linear_extrude(2, convexity=10)
+                        offset (-wall-clearance+offset)
+                            resize([bodyResize, 0, 0])
+                                import (file = bodyShape, convexity= 4);
             
             translate([-socketW/2,0, neckEnd + (socketL + socketD)/2 - bodyPos]) 
                 rotate([90,0,0]) 
                     linear_extrude(bodyTh, convexity=10) 
-                        offset(clearance*2+wall) 
+                        offset(clearance*2+wall+offset) 
                             square ([socketW, socketL+socketD]);
         }
-    }
 }

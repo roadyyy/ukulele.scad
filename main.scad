@@ -10,7 +10,7 @@ neckD = 15; // neck depth
 // body
 bodyPos = 10; // body Z offset
 bodyTh = 60; // body thickness
-wall = 2; // body wall thickness
+wall = 1.5; // body wall thickness
 bodyShape = "jt.dxf"; // shape pd the body
 bodyResize = scaleLength/2+50; // resize body to this
 hole = 50/2; // hole radius
@@ -33,7 +33,7 @@ tunerScrewDistance = 10.35; // tuner screw hole distance from tuner axis
 tunerScrewAngle = 45; // tuner screw hole angle
 
 //fretboard
-fretBoardD= 3; // fretboard depth (height above body)
+fretBoardD= 4; // fretboard depth (height above body)
 nutH = 2.1; // nut height
 nutL = 3; // nut length (along neck)
 fretH = 1.1; // fret height above neck (radius)
@@ -47,7 +47,7 @@ fretMark = 3; // fretmark radius
 stringsWidthNut = 26.8; // 1st to 4th string center distance at nut
 stringsWidthBridge = 40.2; // 1st to 4th string center distance at bridge
 stringHeight = 1.7; // height of strings above fretboard at nut
-stringHeightBridge = 12; // height of strings above fretboard at bridge
+stringHeightBridge = 9; // height of strings above fretboard at bridge
 
 // gauges
 s1g = .5; // 1st A
@@ -84,11 +84,9 @@ include <./bridge.scad>;
 
 // assembly
 color(bodyC) body();
-union () {
-    color(bodyC) deck();
-    color(neckC) bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
-}
-color(bodyC) bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh, bridgeBaseHeight);
+color(bodyC) deck();
+color(neckC) bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
+color(bodyC) bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh-.4, bridgeBaseHeight);
 
 color(neckC) translate([0,0.01,0]) union () {
     neck();
