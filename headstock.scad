@@ -9,7 +9,7 @@ module headstock () {
                                 translate([0,0,-headstockD])
                                     resize([headstockResizeW, headstockResizeL, 0])
                                         linear_extrude(headstockD, convexity=10) 
-                                            import (file = "headstock.dxf");
+                                            import (file = "headstock.svg");
                             }
                         difference() {
                             scale([1, neckD/neckW1*2])
@@ -21,14 +21,15 @@ module headstock () {
                         }
                     }
                     rotate([90-headstockAngle, 0,180]) {
-                        translate([15,30, -headstockD])
+                        translate([15,35, -headstockD]) {
                             tuner("R");
-                        translate([-21,5,0]) rotate ([0,0, -20]) {
-                            translate([0,30, -headstockD])
-                                tuner("L");
+                            translate([-7,25])
+                            tuner("R");
+                        }
+                        translate([-34,-21,0]) rotate ([0,0, -20]) {
                             translate([0,55, -headstockD])
                                 tuner("L");
-                            translate([0,80, -headstockD])
+                            translate([-3,80, -headstockD])
                                 tuner("L");
                         }
                     }

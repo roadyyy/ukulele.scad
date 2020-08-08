@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   sodipodi:docname="headstock.svg"
+   id="svg1272"
+   version="1.1"
+   height="1122.5196850393702"
+   width="793.7007874015749"
+   viewBox="0 0 793.7007874015749 1122.5196850393702">
+  <metadata
+     id="metadata1276">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     inkscape:current-layer="g1268"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-8"
+     inkscape:window-x="-8"
+     inkscape:cy="1012.6394"
+     inkscape:cx="74.885652"
+     inkscape:zoom="1.5144501"
+     showgrid="false"
+     id="namedview1274"
+     inkscape:window-height="1017"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff" />
+  <defs
+     id="defs1114">
+    <marker
+       style="overflow:visible"
+       refY="0.0"
+       refX="0.0"
+       orient="auto"
+       id="DistanceX">
+      <path
+         id="path1102"
+         style="stroke:#000000; stroke-width:0.5"
+         d="M 3,-3 L -3,3 M 0,-5 L  0,5" />
+    </marker>
+    <pattern
+       y="0"
+       x="0"
+       height="8"
+       width="8"
+       patternUnits="userSpaceOnUse"
+       id="Hatch">
+      <path
+         id="path1105"
+         linecap="square"
+         stroke-width="0.25"
+         stroke="#000000"
+         d="M8 4 l-4,4" />
+      <path
+         id="path1107"
+         linecap="square"
+         stroke-width="0.25"
+         stroke="#000000"
+         d="M6 2 l-4,4" />
+      <path
+         id="path1109"
+         linecap="square"
+         stroke-width="0.25"
+         stroke="#000000"
+         d="M4 0 l-4,4" />
+    </pattern>
+    <symbol
+       id="*MODEL_SPACE" />
+    <symbol
+       id="*PAPER_SPACE" />
+  </defs>
+  <g
+     id="g1116"
+     inkscape:label="0"
+     inkscape:groupmode="layer" />
+  <g
+     id="g1268"
+     inkscape:label="Layer_1"
+     inkscape:groupmode="layer">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M -33.131 1121.67 L 37.9612 1122.48 L 41.3597 1116.31 L 49.809 1101.62 L 55.1092 1092.85 L 60.69 1084.08 L 66.2238 1076.04 L 68.8708 1072.51 L 71.3833 1069.43 L 76.1028 1064.22 L 80.3981 1059.99 L 84.206 1056.65 L 87.4633 1054.1 L 90.1068 1052.28 L 92.0732 1051.08 L 93.7223 1050.22 L 83.9307 1020.61 L 79.1832 1005.82 L 74.5959 991.033 L 70.2149 976.231 L 66.0863 961.412 L 62.2562 946.567 L 58.7707 931.689 L 55.6758 916.769 L 53.0177 901.801 L 50.8425 886.776 L 49.1961 871.687 L 48.5857 864.115 L 48.1247 856.525 L 47.8191 848.914 L 47.6744 841.283 L 47.6966 833.629 L 47.8913 825.953 L 48.2644 818.252 L 48.8215 810.527 L 46.4884 809.617 L 44.1934 808.981 L 41.9358 808.603 L 39.7148 808.468 L 37.5296 808.557 L 35.3796 808.857 L 33.2639 809.351 L 31.182 810.022 L 29.1329 810.854 L 27.116 811.832 L 23.1758 814.16 L 19.3555 816.877 L 15.6492 819.854 L 8.55491 826.074 L 5.15512 829.06 L 1.84572 831.791 L -1.3792 834.139 L -4.52554 835.976 L -6.07108 836.662 L -7.59918 837.172 L -9.11059 837.49 L -10.606 837.6 L -17.3806 837.401 L -23.3272 836.877 L -28.4227 836.137 L -32.6437 835.289 L -35.9672 834.44 L -38.3698 833.7 L -40.3198 832.978 L -46.9402 867.223 L -53.3528 898.919 L -56.7914 915.17 L -60.1778 930.454 L -64.723 950.685 L -70.1054 972.799 L -75.8801 995.385 L -81.6023 1017.03 L -91.1101 1051.85 L -95.0702 1065.97 L -92.6039 1067.26 L -89.6983 1068.91 L -85.8352 1071.27 L -81.1327 1074.37 L -75.709 1078.24 L -69.6821 1082.9 L -63.1703 1088.39 L -56.4564 1094.6 L -50.508 1100.61 L -45.365 1106.23 L -41.0674 1111.27 L -37.6552 1115.53 L -35.1685 1118.81 L -33.131 1121.67 L -33.131 1121.67"
+       id="path1845"
+       sodipodi:nodetypes="ccsccscccsc" />
+  </g>
+  <desc
+     id="desc1270">headstock.dxf - scale = 1.000000, origin = (0.000000, 0.000000), method = manual</desc>
+</svg>

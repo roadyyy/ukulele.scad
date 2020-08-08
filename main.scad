@@ -10,8 +10,8 @@ neckD = 15; // neck depth
 // body
 bodyPos = 10; // body Z offset
 bodyTh = 60; // body thickness
-wall = 1.5; // body wall thickness
-bodyShape = "jt.dxf"; // shape pd the body
+wall = 1; // body wall thickness
+bodyShape = "superS.svg"; // shape pd the body
 bodyResize = scaleLength/2+50; // resize body to this
 hole = 50/2; // hole radius
 holePos = 40; // hole position on the body
@@ -23,11 +23,11 @@ socketCylinderOffset = -10; // socket cylinder cutout position
 //headstock
 
 headstockD = 10; // headstock depth
-headstockAngle = 13; // headstock angle
+headstockAngle = 15; // headstock angle
 headstockResizeL = 100; // headstock resize to length
-headstockResizeW = 60; // headstock resize to width
+headstockResizeW = 55; // headstock resize to width
 tunerHole = 5; // tuner hole raduis (usually 5mm)
-tunerScrew = 0.5; // tuner screw raduis
+tunerScrew = 0.7; // tuner screw raduis
 tunerScrewL = 8; // tuner screw length
 tunerScrewDistance = 10.35; // tuner screw hole distance from tuner axis
 tunerScrewAngle = 45; // tuner screw hole angle
