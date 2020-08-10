@@ -30,13 +30,13 @@ module body () {
             }
             translate([0, -bodyTh,0]) {
                 difference () {
-                    innerDeck(0.1, 0);
+                    innerDeck(wall, 0);
                     innerDeck(-3, 0.1);
                 }
             }
             translate([0, -3-wall,0]) {
                 difference () {
-                    innerDeck(0.1, 0);
+                    innerDeck(wall, 0);
                     innerDeck(-3, 0.1);
                 }
             }
@@ -56,8 +56,8 @@ module body () {
             }
             // bridge supports
             intersection() {
-                translate([-1.5 + neckW2/2,-bodyTh, neckL-scaleLength-40]) 
-                    cube ([3, bodyTh, 40]);
+                translate([-1.5 + neckW2/2,-bodyTh, neckL-scaleLength-50]) 
+                    cube ([3, bodyTh, 60]);
 
                 translate([0, -bodyTh, bodyPos]) 
                     rotate([0, -90,-90]) 
@@ -67,8 +67,8 @@ module body () {
             }
 
             intersection() {
-                translate([-1.5 - neckW2/2,-bodyTh, neckL-scaleLength-40]) 
-                    cube ([3, bodyTh, 40]);
+                translate([-1.5 - neckW2/2,-bodyTh, neckL-scaleLength-50]) 
+                    cube ([3, bodyTh, 60]);
 
                 translate([0, -bodyTh, bodyPos]) 
                     rotate([0, -90,-90]) 
@@ -103,7 +103,7 @@ module deck() {
             translate([0, -wall, bodyPos])
                 rotate([0, -90,-90]) 
                     linear_extrude(wall, convexity=10)
-                        offset (-wall-(2*clearance)) resize([bodyResize, 0, 0])
+                        offset (-wall-(clearance)) resize([bodyResize, 0, 0])
                             import (file = bodyShape, convexity= 4);
             
            

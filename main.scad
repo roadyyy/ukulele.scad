@@ -36,7 +36,7 @@ tunerScrewAngle = 45; // tuner screw hole angle
 fretBoardD= 4; // fretboard depth (height above body)
 nutH = 2.1; // nut height
 nutL = 3; // nut length (along neck)
-fretH = 1.1; // fret height above neck (radius)
+fretH = 1.5; // fret height above neck (radius)
 numFrets = 18; // number of frets
 
 fm = [5,7,10,15]; // fretmarks on frets #
