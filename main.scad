@@ -10,7 +10,8 @@ neckD = 15; // neck depth
 // body
 bodyPos = 10; // body Z offset
 bodyTh = 60; // body thickness
-wall = 1; // body wall thickness
+wall = 1.4; // body wall thickness
+sbWall = 2; // soundboard wall thickness
 bodyShape = "superS.svg"; // shape pd the body
 bodyResize = scaleLength/2+50; // resize body to this
 hole = 50/2; // hole radius
@@ -20,8 +21,8 @@ holePos = 40; // hole position on the body
 socketL = 40; // socket length
 socketCylinder = 15/2; // socket cylinder cutouts raduis
 socketCylinderOffset = -10; // socket cylinder cutout position
-//headstock
 
+//headstock
 headstockD = 10; // headstock depth
 headstockAngle = 15; // headstock angle
 headstockResizeL = 100; // headstock resize to length
@@ -34,7 +35,7 @@ tunerScrewAngle = 45; // tuner screw hole angle
 
 //fretboard
 fretBoardD= 4; // fretboard depth (height above body)
-nutH = 2.1; // nut height
+nutH = 2; // nut height
 nutL = 3; // nut length (along neck)
 fretH = 1.5; // fret height above neck (radius)
 numFrets = 18; // number of frets
@@ -50,23 +51,17 @@ stringHeight = 1.7; // height of strings above fretboard at nut
 stringHeightBridge = 9; // height of strings above fretboard at bridge
 
 // gauges
-s1g = .5; // 1st A
-s2g = .7; // 2nd E
-s3g = .9; // 3rd C
-s4g = .5; // 4th G
+s1g = .7; // 1st A
+s2g = .9; // 2nd E
+s3g = 1.1; // 3rd C
+s4g = .7; // 4th G
 
 // bridge
 bridgeNutW = stringsWidthBridge + 10;
 bridgeNutH = stringHeightBridge;
 bridgeNutTh = 3;
-bridgeBaseHeight = 3;
+bridgeBaseHeight = 4;
 bridgeL = 25;
-
-// colors (view only)
-bodyC = "white"; // body color
-neckC = "#333333"; //neck color
-headstockC = "white"; // headstock color
-fretboardC = "#333333"; // fretboard color
 
 // computed
 socketDistance = scaleLength/2+10;
@@ -83,18 +78,18 @@ include <./bridge.scad>;
 
 
 // assembly
-color(bodyC) body();
-color(bodyC) deck();
-color(neckC) bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
-color(bodyC) bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh-.4, bridgeBaseHeight);
+    body();
+    deck();
+    bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
+    !bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh-.4, bridgeBaseHeight);
 
-color(neckC) translate([0,0.01,0]) union () {
-    neck();
-    translate([0,0,neckL-socketDistance]) 
-        socket();
-}
+    translate([0,0.01,0]) union () {
+        neck();
+        translate([0,0,neckL-socketDistance]) 
+            socket();
+    }
 
-color(headstockC) headstock();
-color(fretboardC) fretboard();
-color(bodyC) fretmarks(0, clearance);
+    headstock();
+    fretboard();
+    fretmarks(0, clearance);
 

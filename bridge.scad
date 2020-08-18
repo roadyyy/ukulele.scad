@@ -1,7 +1,7 @@
 module bridge (l, h, nW, thick, stringsWidth, gauge) {
     union () {
         mink = 6;
-        heightMultiplier = 1.67;
+        heightMultiplier = 1.2;
         translate([-(nW + 30) / 2 + mink, 0, neckL - scaleLength + 5-mink])
             rotate([-90,0,0])
                 minkowski() {
@@ -30,13 +30,13 @@ module bridge (l, h, nW, thick, stringsWidth, gauge) {
 
                 cube([nW, 8,10]);
                 // string holes
-                translate([-(-nW) / 2 + stringsWidth / 6,5, -1]) 
+                translate([-(-nW) / 2 + stringsWidth / 6, 4.5, -1]) 
                     cylinder(12, gauge, gauge);
-                translate([-(-nW) / 2 + stringsWidth / 2,5, -1]) 
+                translate([-(-nW) / 2 + stringsWidth / 2, 4.5, -1]) 
                     cylinder(12, gauge, gauge);
-                translate([-(-nW) / 2 - stringsWidth / 6,5, -1]) 
+                translate([-(-nW) / 2 - stringsWidth / 6, 4.5, -1]) 
                     cylinder(12, gauge, gauge);
-                translate([-(-nW) / 2 - stringsWidth / 2,5, -1]) 
+                translate([-(-nW) / 2 - stringsWidth / 2, 4.5, -1]) 
                     cylinder(12, gauge, gauge);
                 }
             }
@@ -45,10 +45,10 @@ module bridge (l, h, nW, thick, stringsWidth, gauge) {
         //positioning sockets
         translate([15,0, neckL - scaleLength])
             rotate([90,0,0])
-                cylinder (wall, 2.5, 2.5);
+                cylinder (sbWall, 2.5, 2.5);
         translate([-15,0, neckL - scaleLength])
             rotate([90,0,0])
-                cylinder (wall, 2.5, 2.5);
+                cylinder (sbWall, 2.5, 2.5);
     }
 }
 
