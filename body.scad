@@ -56,8 +56,11 @@ module body () {
             }
             // bridge supports
             intersection() {
-                translate([-1.5 + neckW2/2, -bodyTh/3, neckL-scaleLength-50]) 
-                    cube ([3, bodyTh/3, 60]);
+                translate([-1.5 + neckW2/2, -bodyTh, neckL-scaleLength-50])
+                    difference () {
+                        cube ([3, bodyTh, 60]);
+                        translate([-.1, 0, bodyTh+sbWall + 10]) rotate([0, 90, 0]) cylinder(3.2, bodyTh-10, bodyTh-10);
+                    }
 
                 translate([0, -bodyTh, bodyPos]) 
                     rotate([0, -90,-90]) 
@@ -67,8 +70,11 @@ module body () {
             }
 
             intersection() {
-                translate([-1.5 - neckW2/2,-bodyTh/3, neckL-scaleLength-50]) 
-                    cube ([3, bodyTh, 60]);
+                translate([-1.5 - neckW2/2,-bodyTh, neckL-scaleLength-50]) 
+                    difference () {
+                        cube ([3, bodyTh, 60]);
+                        translate([-.1, 0, bodyTh+sbWall + 10]) rotate([0, 90, 0]) cylinder(3.2, bodyTh-10, bodyTh-10);
+                    }
 
                 translate([0, -bodyTh, bodyPos]) 
                     rotate([0, -90,-90]) 

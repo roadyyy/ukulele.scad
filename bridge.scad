@@ -30,14 +30,14 @@ module bridge (l, h, nW, thick, stringsWidth, gauge) {
 
                 cube([nW, 8,10]);
                 // string holes
-                translate([-(-nW) / 2 + stringsWidth / 6, 4.5, -1]) 
-                    cylinder(12, gauge, gauge);
-                translate([-(-nW) / 2 + stringsWidth / 2, 4.5, -1]) 
-                    cylinder(12, gauge, gauge);
-                translate([-(-nW) / 2 - stringsWidth / 6, 4.5, -1]) 
-                    cylinder(12, gauge, gauge);
-                translate([-(-nW) / 2 - stringsWidth / 2, 4.5, -1]) 
-                    cylinder(12, gauge, gauge);
+                translate([-(-nW) / 2 + stringsWidth / 6, 4.7, -1]) 
+                    cylinder(12, gauge/2, gauge/2);
+                translate([-(-nW) / 2 + stringsWidth / 2, 4.7, -1]) 
+                    cylinder(12, gauge/2, gauge/2);
+                translate([-(-nW) / 2 - stringsWidth / 6, 4.7, -1]) 
+                    cylinder(12, gauge/2, gauge/2);
+                translate([-(-nW) / 2 - stringsWidth / 2, 4.7, -1]) 
+                    cylinder(12, gauge/2, gauge/2);
                 }
             }
         }

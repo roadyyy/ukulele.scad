@@ -6,6 +6,8 @@ neckL = 230; // neck length
 neckW1 = 34; // neck with at the nut
 neckW2 = 44; // neck with at the body
 neckD = 15; // neck depth
+tubeSlot = 8/2; // carbon tube insert radius (not diameter). 0 for none
+doubleTube = true; // two tube inserts
 
 // body
 bodyPos = 10; // body Z offset
@@ -37,7 +39,7 @@ tunerScrewAngle = 45; // tuner screw hole angle
 fretBoardD= 4; // fretboard depth (height above body)
 nutH = 2; // nut height
 nutL = 3; // nut length (along neck)
-fretH = 1.5; // fret height above neck (radius)
+fretH = 1.8; // fret height above neck (radius)
 numFrets = 18; // number of frets
 
 fm = [5,7,10,15]; // fretmarks on frets #
@@ -81,7 +83,7 @@ include <./bridge.scad>;
     body();
     deck();
     bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
-    !bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh-.4, bridgeBaseHeight);
+    bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh-.4, bridgeBaseHeight);
 
     translate([0,0.01,0]) union () {
         neck();
@@ -92,4 +94,3 @@ include <./bridge.scad>;
     headstock();
     fretboard();
     fretmarks(0, clearance);
-

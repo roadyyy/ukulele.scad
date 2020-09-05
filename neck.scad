@@ -10,6 +10,7 @@ module neck () {
         // end of socket cut. fretboard will be extended to full length
         translate([-neckW2/2,-socketD, neckEnd]) cube ([neckW2, socketD, socketL]);
 
+        carbon();
     }
 }
 
@@ -39,6 +40,23 @@ module socket () {
             translate([socketW/2, socketD/2, -socketL]) 
                 rotate([90, 0, 0]) 
                     cylinder (socketD+2, socketCylinder, socketCylinder-clearance);
+
+        // carbon tube slot
+        translate([0,0, -socketD]) carbon();
     }
     
+}
+
+module carbon () {
+    if (tubeSlot) {
+        translate([0, -neckD/2, nutL]) {
+            if (doubleTube) {
+                translate ([neckW1 / 4, 0, 0]) cylinder (neckL + clearance - (neckW1/2+clearance*2), tubeSlot, tubeSlot);
+                translate ([-neckW1 / 4, 0, 0]) cylinder (neckL + clearance - (neckW1/2+clearance*2), tubeSlot, tubeSlot);
+            } else {
+                cylinder (neckL + clearance - (neckW1/2+clearance*2), tubeSlot, tubeSlot);
+            }
+        }
+        headstockSocket(0);
+    }
 }
