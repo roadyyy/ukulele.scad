@@ -23,28 +23,28 @@ module fretboard () {
                                 rotate([90,0,0]) 
                                     translate([0,0, -1])
                                         linear_extrude(nutL+2) hull () {
-                                            circle (s1g/2);
+                                            circle (s1g/2 + clearance);
                                             translate([0, -nutH, 0]) circle (s1g/2);
                                         }
                             translate([neckW1/2-stringsWidthNut/2+stringsWidthNut/3,nutL,nutH - stringHeight]) 
                                 rotate([90,0,0]) 
                                     translate([0,0, -1])
                                         linear_extrude(nutL+2) hull () {
-                                            circle (s2g/2);
+                                            circle (s2g/2 + clearance);
                                             translate([0, -nutH, 0]) circle (s2g/2);
                                         }
                             translate([neckW1/2-stringsWidthNut/2+stringsWidthNut/3*2,nutL,nutH - stringHeight]) 
                                 rotate([90,0,0]) 
                                     translate([0,0, -1])
                                         linear_extrude(nutL+2) hull () {
-                                            circle (s3g/2);
+                                            circle (s3g/2 + clearance);
                                             translate([0, -nutH, 0]) circle (s3g/2);
                                         }
                             translate([neckW1/2+stringsWidthNut/2,nutL,nutH - stringHeight]) 
                                 rotate([90,0,0]) 
                                     translate([0,0, -1])
                                         linear_extrude(nutL+2) hull () {
-                                            circle (s4g/2);
+                                            circle (s4g/2 + clearance);
                                             translate([0, -nutH, 0]) circle (s4g/2);
                                         }
                         }

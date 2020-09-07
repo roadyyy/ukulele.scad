@@ -1,5 +1,5 @@
 $fn = 64;
-clearance= 0.2;
+clearance= 0.4;
 // neck
 scaleLength = 350;
 neckL = 230; // neck length
@@ -32,7 +32,7 @@ headstockResizeW = 55; // headstock resize to width
 tunerHole = 5; // tuner hole raduis (usually 5mm)
 tunerScrew = 0.7; // tuner screw raduis
 tunerScrewL = 8; // tuner screw length
-tunerScrewDistance = 10.35; // tuner screw hole distance from tuner axis
+tunerScrewDistance = 11.35; // tuner screw hole distance from tuner axis
 tunerScrewAngle = 45; // tuner screw hole angle
 
 //fretboard

@@ -51,10 +51,10 @@ module carbon () {
     if (tubeSlot) {
         translate([0, -neckD/2, nutL]) {
             if (doubleTube) {
-                translate ([neckW1 / 4, 0, 0]) cylinder (neckL + clearance - (neckW1/2+clearance*2), tubeSlot, tubeSlot);
-                translate ([-neckW1 / 4, 0, 0]) cylinder (neckL + clearance - (neckW1/2+clearance*2), tubeSlot, tubeSlot);
+                translate ([neckW1 / 4, 0, 0]) cylinder (neckL + clearance - (neckW1/2+clearance*2), tubeSlot + clearance, tubeSlot + clearance);
+                translate ([-neckW1 / 4, 0, 0]) cylinder (neckL + clearance - (neckW1/2+clearance*2), tubeSlot + clearance, tubeSlot + clearance);
             } else {
-                cylinder (neckL + clearance - (neckW1/2+clearance*2), tubeSlot, tubeSlot);
+                cylinder (neckL + clearance - (neckW1/2+clearance*2), tubeSlot + clearance, tubeSlot + clearance);
             }
         }
         headstockSocket(0);
