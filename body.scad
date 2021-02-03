@@ -21,12 +21,7 @@ module body () {
                 translate([0,1,-holePos]) rotate([90,0,0]) cylinder(wall+2, hole, hole);
                 
                 //bridge positioning holes
-                translate([15, +0.5, neckL - scaleLength])
-                    rotate([90,0,0])
-                        cylinder (sbWall+1, 2.5+clearance/2, 2.5+clearance/2);
-                translate([-15,+0.5, neckL - scaleLength])
-                    rotate([90,0,0])
-                        cylinder (sbWall+1, 2.5+clearance/2, 2.5+clearance/2);
+                bridgePins(clearance);
             }
             translate([0, -bodyTh,0]) {
                 difference () {

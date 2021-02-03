@@ -53,16 +53,16 @@ stringHeight = 1.7; // height of strings above fretboard at nut
 stringHeightBridge = 9; // height of strings above fretboard at bridge
 
 // gauges
-s1g = .7; // 1st A
-s2g = .9; // 2nd E
-s3g = 1.1; // 3rd C
-s4g = .7; // 4th G
+s1g = .8; // 1st A
+s2g = 1; // 2nd E
+s3g = 1.2; // 3rd C
+s4g = .8; // 4th G
 
 // bridge
 bridgeNutW = stringsWidthBridge + 10;
 bridgeNutH = stringHeightBridge;
 bridgeNutTh = 3;
-bridgeBaseHeight = 4;
+bridgeBaseHeight = 3;
 bridgeL = 25;
 
 // computed
@@ -76,15 +76,16 @@ include <./neck.scad>;
 include <./headstock.scad>;
 include <./fretboard.scad>;
 include <./bridge.scad>;
+include <./bridgePins.scad>;
 
 
 
 // assembly
     body();
-    deck();
+    %deck();
     bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
     bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh-.4, bridgeBaseHeight);
-
+    bridgePins(0);
     translate([0,0.01,0]) union () {
         neck();
         translate([0,0,neckL-socketDistance]) 
