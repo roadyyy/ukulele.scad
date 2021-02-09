@@ -4,10 +4,10 @@ module bridge (l, h, nW, thick, stringsWidth, gauge) {
         union () {
             mink = 6;
             heightMultiplier = 1.35;
-            translate([-(nW + 30) / 2 + mink, 0, neckL - scaleLength + 5-mink])
+            translate([-(nW + 35) / 2 + mink, 0, neckL - scaleLength + 5-mink])
                 rotate([-90,0,0])
                     minkowski() {
-                        cube([nW+30-mink*2, l-mink*2, 0.01]);
+                        cube([nW+35-mink*2, l-mink*2, 0.01]);
                         cylinder(h-0.01, mink,0);
                     }
                 difference () {

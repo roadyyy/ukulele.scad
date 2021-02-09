@@ -1,5 +1,5 @@
 $fn = 64;
-clearance= 0.4;
+clearance= .2; // overall clearance
 // neck
 scaleLength = 350;
 neckL = 230; // neck length
@@ -7,12 +7,14 @@ neckW1 = 34; // neck with at the nut
 neckW2 = 44; // neck with at the body
 neckD = 15; // neck depth
 tubeSlot = 8/2; // carbon tube insert radius (not diameter). 0 for none
-doubleTube = true; // two tube inserts
+doubleTube = false; // two tube inserts
 
 // body
 bodyPos = 10; // body Z offset
 bodyTh = 60; // body thickness
-wall = 1.4; // body wall thickness
+// body wall thickness
+// 1.4 wall is recommended when you are printing in ESun eWood
+wall = 1.4; 
 sbWall = 2; // soundboard wall thickness
 bodyShape = "superS.svg"; // shape pd the body
 bodyResize = scaleLength/2+50; // resize body to this
@@ -25,6 +27,7 @@ socketCylinder = 15/2; // socket cylinder cutouts raduis
 socketCylinderOffset = -10; // socket cylinder cutout position
 
 //headstock
+headstockClearance = clearance;
 headstockD = 10; // headstock depth
 headstockAngle = 15; // headstock angle
 headstockResizeL = 100; // headstock resize to length
@@ -82,7 +85,7 @@ include <./bridgePins.scad>;
 
 // assembly
     body();
-    %deck();
+    deck();
     bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
     bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh-.4, bridgeBaseHeight);
     bridgePins(0);
@@ -92,6 +95,6 @@ include <./bridgePins.scad>;
             socket();
     }
 
-    headstock();
+    headstock(headstockClearance);
     fretboard();
     fretmarks(0, clearance);

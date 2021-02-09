@@ -6,7 +6,7 @@ module neck () {
             cube([neckW2, neckW2, neckL+nutL+2]);
         translate([0,0, neckL-socketDistance-socketL/2]) 
             cube ([neckW2, neckW2, socketL], true);
-        headstockSocket(clearance);
+        headstockSocket(0);
         // end of socket cut. fretboard will be extended to full length
         translate([-neckW2/2,-socketD, neckEnd]) cube ([neckW2, socketD, socketL]);
 
