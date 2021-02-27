@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15, custom)"
+   sodipodi:docname="noteHeadstock.svg"
+   id="svg1272"
+   version="1.1"
+   height="1122.5196850393702"
+   width="793.7007874015749"
+   viewBox="0 0 793.7007874015749 1122.5196850393702">
+  <metadata
+     id="metadata1276">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     inkscape:current-layer="g1268"
+     inkscape:window-maximized="1"
+     inkscape:window-y="-9"
+     inkscape:window-x="-9"
+     inkscape:cy="944.36263"
+     inkscape:cx="28.160184"
+     inkscape:zoom="1.5144501"
+     showgrid="false"
+     id="namedview1274"
+     inkscape:window-height="1001"
+     inkscape:window-width="1920"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0"
+     guidetolerance="10"
+     gridtolerance="10"
+     objecttolerance="10"
+     borderopacity="1"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     inkscape:document-rotation="0" />
+  <defs
+     id="defs1114">
+    <marker
+       style="overflow:visible"
+       refY="0.0"
+       refX="0.0"
+       orient="auto"
+       id="DistanceX">
+      <path
+         id="path1102"
+         style="stroke:#000000; stroke-width:0.5"
+         d="M 3,-3 L -3,3 M 0,-5 L  0,5" />
+    </marker>
+    <pattern
+       y="0"
+       x="0"
+       height="8"
+       width="8"
+       patternUnits="userSpaceOnUse"
+       id="Hatch">
+      <path
+         id="path1105"
+         linecap="square"
+         stroke-width="0.25"
+         stroke="#000000"
+         d="M8 4 l-4,4" />
+      <path
+         id="path1107"
+         linecap="square"
+         stroke-width="0.25"
+         stroke="#000000"
+         d="M6 2 l-4,4" />
+      <path
+         id="path1109"
+         linecap="square"
+         stroke-width="0.25"
+         stroke="#000000"
+         d="M4 0 l-4,4" />
+    </pattern>
+    <symbol
+       id="*MODEL_SPACE" />
+    <symbol
+       id="*PAPER_SPACE" />
+  </defs>
+  <g
+     id="g1116"
+     inkscape:label="0"
+     inkscape:groupmode="layer" />
+  <g
+     id="g1268"
+     inkscape:label="Layer_1"
+     inkscape:groupmode="layer">
+    <path
+       id="path1845"
+       style="fill:#d35f5f;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m -55.267399,828.72539 -39.802913,237.24731 c 0,0 13.993907,6.6534 31.90039,22.4199 18.888663,16.6313 30.039063,33.2812 30.039063,33.2812 l 71.091797,0.8067 c 0,0 20.453196,-37.9561 33.421874,-53.0547 13.094645,-15.2453 25.641373,-31.7528 30.263508,-51.5619 C 88.438426,948.54527 52.356817,867.21395 64.857788,825.22951 68.68284,812.38309 81.245786,807.40988 95.08454,802.27209 76.124831,651.53241 -41.785315,735.86228 -55.267399,828.72539 Z"
+       sodipodi:nodetypes="ccsccscscc" />
+  </g>
+  <desc
+     id="desc1270">headstock.dxf - scale = 1.000000, origin = (0.000000, 0.000000), method = manual</desc>
+</svg>

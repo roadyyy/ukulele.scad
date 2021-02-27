@@ -1,5 +1,5 @@
 $fn = 64;
-clearance= .2; // overall clearance
+clearance= .3; // overall clearance
 // neck
 scaleLength = 350;
 neckL = 230; // neck length
@@ -10,16 +10,22 @@ tubeSlot = 8/2; // carbon tube insert radius (not diameter). 0 for none
 doubleTube = false; // two tube inserts
 
 // body
-bodyPos = 10; // body Z offset
+bodyPos = -10; // body Z offset
 bodyTh = 60; // body thickness
 // body wall thickness
-// 1.4 wall is recommended when you are printing in ESun eWood
-wall = 1.4; 
-sbWall = 2; // soundboard wall thickness
-bodyShape = "superS.svg"; // shape pd the body
+/*
+Recommendations:
+    1.4 for Esun - eWood
+    0.8 or 1 for Esun PLA+
+*/
+wall = 1.2; 
+sbWall = wall; // soundboard wall thickness
+bodyShape = "violin.svg"; // shape pd the body
 bodyResize = scaleLength/2+50; // resize body to this
 hole = 50/2; // hole radius
-holePos = 40; // hole position on the body
+customHole = true; // is set true, this will be generated from shShape instead oh circular hole
+shShape = "soundHole.svg"; // filename for a custom soundhole
+holePos = 70; // hole position on the body
 
 // socket
 socketL = 40; // socket length
@@ -27,6 +33,7 @@ socketCylinder = 15/2; // socket cylinder cutouts raduis
 socketCylinderOffset = -10; // socket cylinder cutout position
 
 //headstock
+headstockShape = "noteHeadstock.svg";
 headstockClearance = clearance;
 headstockD = 10; // headstock depth
 headstockAngle = 15; // headstock angle
@@ -85,8 +92,8 @@ include <./bridgePins.scad>;
 
 // assembly
     body();
-    deck();
-    bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
+    #deck();
+    #bridge(bridgeL, bridgeBaseHeight, bridgeNutW, bridgeNutTh, stringsWidthBridge, s3g+.3);
     bridgeNut(bridgeNutH, bridgeNutW, bridgeNutTh-.4, bridgeBaseHeight);
     bridgePins(0);
     translate([0,0.01,0]) union () {
@@ -96,5 +103,5 @@ include <./bridgePins.scad>;
     }
 
     headstock(headstockClearance);
-    fretboard();
+    #fretboard();
     fretmarks(0, clearance);
